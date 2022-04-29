@@ -26,12 +26,23 @@
             data-bs-toggle="dropdown"
             aria-expanded="false"
             >
-            Dropdown
+            Pride and Perjudice
             </a>
+
+            
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li v-for="(item,index) in PrimerElemento" :key=index>
-                <router-link :to="item.url" :class="['dropdown-item']">{{item.name}}</router-link>
-            </li>
+                
+                <li v-for="(item,index) in pridePerjudicePart1" :key=index>
+                    <router-link :to="item.url" :class="['dropdown-item']">{{item.name}}</router-link>
+                </li>
+                <li><hr class="dropdown-divider"></li>
+                <li v-for="(item,index) in pridePerjudicePart2" :key=index>
+                    <router-link :to="item.url" :class="['dropdown-item']">{{item.name}}</router-link>
+                </li>
+                <li><hr class="dropdown-divider"></li>
+                <li v-for="(item,index) in pridePerjudicePart3" :key=index>
+                    <router-link :to="item.url" :class="['dropdown-item']">{{item.name}}</router-link>
+                </li>
             </ul>
         </li>
         </ul>
@@ -46,8 +57,16 @@ export default {
     name:"NavMenu",
     data:()=>{
         return {
-            PrimerElemento:[
-            {name:"about",url:"/about"},
+            pridePerjudicePart1:[
+            {name:"Chapter 1",url:"/pride_p1c1/part1/capter_01"},
+            {name:"Chapter 2",url:"/pride_p1c2/part1/capter_02"}
+            ],
+            pridePerjudicePart2:[
+            {name:"Chapter 1",url:"/about"},
+            {name:"about",url:"/about"}
+            ],
+            pridePerjudicePart3:[
+            {name:"Chapter 1",url:"/about"},
             {name:"about",url:"/about"}
             ]
         }

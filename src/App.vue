@@ -1,31 +1,17 @@
 <template>
   <nav>
     <NavMenu />
-    <div id="formulas">
-      <math-jax latex="\prec" />
-    </div>
-
-    <pre v-highlightjs><code class="javascript">const s = new Date().toString()</code></pre>
-
-    <Markdown :source="source" />
   </nav>
   <router-view />
 </template>
 
 <script>
 import NavMenu from "@/components/NavMenu.vue"
-import Markdown from 'vue3-markdown-it';
 
 export default ({
   components: {
     NavMenu,
-    Markdown,
   },
-  data:()=>{
-    return {
-      source:"# hello world!"
-    }
-  }
 })
 </script>
 
@@ -40,7 +26,8 @@ export default ({
   min-height:100vh;
 }
 #cuerpo{
-  margin: 1rem;
+  margin: 1rem 10rem;
+  padding: 0 0 6rem 0;
 }
 
 .enfasis {
@@ -60,6 +47,37 @@ export default ({
     color: #D00000;
 }
 
+.significado {
+  color: hsla(269, 100%, 62%, 1);
+}
+
+.menuValores {
+  list-style: none;
+  /* background-color: #000000; */
+  display: inline-block;
+  /* color: #ffffff; */
+  /* margin: 10px; */
+  padding: 1px;
+  position: absolute;
+  width: 150px;
+}
+
+.menuValores li {
+  background-color: hsla(131, 100%, 10%, 1);
+  color: #E85D04;
+  border: 1px solid hsla(131, 100%, 50%, 1);
+  padding: 6px 3px;
+  text-indent: 0;
+  text-transform: lowercase;
+}
+
+.menuValores li::first-letter {
+  text-transform: uppercase;
+}
+
+.ocultar {
+  display: none;
+}
 h1 {
     text-align: center;
     color: #E85D04;
