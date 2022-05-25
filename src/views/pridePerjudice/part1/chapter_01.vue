@@ -169,6 +169,12 @@ export default {
                 {word:"solace",meaning:"consuelo"},
 
             ]
+            palabras.sort((a,b)=>{
+                if (a.word < b.word) return -1
+                else if (a.word > b.word) return 1
+                else return 0
+            })
+            
             this.iniciando(palabras,elem)
         })
 
