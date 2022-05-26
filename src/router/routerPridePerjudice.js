@@ -18,4 +18,13 @@ export const pridePerjudice=[
         // which is lazy-loaded when the route is visited.
         component: () => import(/* webpackChunkName: "about" */ '../views/pridePerjudice/part1/chapter_02.vue')
     }
+    ,
+    {
+        path: '/pride_p1c3/part1/capter_03',
+        name: 'Pride_P1C3',
+        // route level code-splitting
+        // this generates a separate chunk (about.[hash].js) for this route
+        // which is lazy-loaded when the route is visited.
+        component: () => import(/* webpackChunkName: "about" */ '../views/pridePerjudice/part1/chapter_03.vue')
+    }
 ];

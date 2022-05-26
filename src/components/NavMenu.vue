@@ -59,7 +59,8 @@ export default {
         return {
             pridePerjudicePart1:[
             {name:"Chapter 1",url:"/pride_p1c1/part1/capter_01"},
-            {name:"Chapter 2",url:"/pride_p1c2/part1/capter_02"}
+            {name:"Chapter 2",url:"/pride_p1c2/part1/capter_02"},
+            {name:"Chapter 3",url:"/pride_p1c3/part1/capter_03"}
             ],
             pridePerjudicePart2:[
             {name:"Chapter 1",url:"/about"},
